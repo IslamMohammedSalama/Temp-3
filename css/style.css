@@ -618,12 +618,6 @@ header .mega-menu .links li a:hover::before {
     /* right: -11.5%; */
 }
 
-@media (max-min:786px) {
-    .features .box:hover .image::after {
-        right: -11.5%;
-    }
-}
-
 @media (max-width:787px) {
     .features .box:hover .image::after {
         right: -11.5%;
