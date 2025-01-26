@@ -372,7 +372,6 @@ header .mega-menu .links li a:hover::before {
 /* Start Landing */
 .landing {
     position: relative;
-    top: 72px;
 }
 
 .landing::before {
@@ -391,8 +390,16 @@ header .mega-menu .links li a:hover::before {
 .landing .container {
     display: flex;
     padding-bottom: 120px;
-    height: calc(100vh - 72px);
     align-items: center;
+    padding-top: 70px;
+    height: calc(100vh - 50px);
+}
+
+@media (min-width:768px) {
+    .landing .container {
+        height: calc(100vh - 72px);
+        padding-top: 90px;
+    }
 }
 
 .landing .container .image img {
