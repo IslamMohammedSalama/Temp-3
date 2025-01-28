@@ -116,6 +116,15 @@ h2.main-title:hover {
     border-color: white;
 }
 
+h2.main-title::before {
+    left: -30px;
+}
+
+h2.main-title::after {
+    right: -30px;
+}
+
+/* Add transitions to pseudo-elements */
 h2.main-title::before,
 h2.main-title::after {
     content: "";
@@ -125,25 +134,24 @@ h2.main-title::after {
     height: 12px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: -1;
     border-radius: 50%;
-}
-
-h2.main-title::before {
-    left: -30px;
+    transition: all 0.5s linear;
+    /* Animate all changed properties */
 }
 
 h2.main-title:hover::before {
-    animation: left-move 0.5s linear forwards;
-    z-index: -1;
-}
-
-h2.main-title::after {
-    right: -30px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: var(--border-radies) 0 0 var(--border-radies);
 }
 
 h2.main-title:hover::after {
-    animation: right-move 0.5s linear forwards;
-    z-index: -1;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 0 var(--border-radies) var(--border-radies) 0;
 }
 
 /* Spicks */
@@ -217,7 +225,7 @@ header .container .logo {
     width: fit-content;
 }
 
-@media (max-width:400px) {
+@media (max-width:315px) {
     header .container .logo {
         margin: 0 auto;
     }
@@ -230,6 +238,7 @@ header .container .logo {
 @media (max-width:767px) {
     header .container .logo {
         height: 50px;
+        font-size: 20px;
     }
 }
 
@@ -272,9 +281,9 @@ header .container>.main-nav>li>a:hover::before {
 
 @media (max-width:767px) {
     header .container>.main-nav>li>a {
-        font-size: 14px;
+        font-size: 10px;
         height: 40px;
-        padding: 10px;
+        padding: 5px;
     }
 }
 
@@ -373,9 +382,10 @@ header .mega-menu .links li a:hover::before {
 
 @media (max-width:767px) {
     header .mega-menu {
-        padding-bottom: 100px;
+        padding-bottom: 90px;
     }
 }
+
 /* End Header */
 
 /* Start Landing */
@@ -1956,6 +1966,13 @@ footer .copyright {
 }
 
 @keyframes right-move {
+    0% {
+        right: -30px;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+    }
+
     50% {
         width: 12px;
         height: 12px;
@@ -1972,6 +1989,13 @@ footer .copyright {
 }
 
 @keyframes left-move {
+    0% {
+        left: -30px;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+    }
+
     50% {
         width: 12px;
         height: 12px;
