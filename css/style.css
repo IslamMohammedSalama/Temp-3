@@ -653,7 +653,7 @@ header .mega-menu .links li a:hover::before {
     border-width: 170px 500px 170px 0;
     /* right: -148px; */
     /* transform: translateX(29.5%); */
-    right: -42%;
+    right: -41%;
     /* right: -11.5%; */
 }
 
@@ -1283,7 +1283,8 @@ header .mega-menu .links li a:hover::before {
     margin: 20px auto;
     width: 600px;
     gap: 20px;
-    padding: 30px 40px;
+    /* padding: 30px 40px; */
+    padding: 20px;
     border-radius: 50px;
     background-color: #f6f5f5;
     transition: var(--main-transition);
@@ -1475,11 +1476,14 @@ header .mega-menu .links li a:hover::before {
 .pricing .plan.advanced .most-poplar::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     right: 0;
+    transform: translateY(100%);
     border-width: 20px;
     border-style: solid;
-    border-color: transparent transparent white;
+    border-color: var(--main-color) var(--main-color) transparent;
+    transition: var(--main-transition);
+    transition-delay: 0.05s;
 }
 
 /* End Pricing Plans */
