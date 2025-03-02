@@ -281,7 +281,7 @@ header .container>.main-nav>li>a:hover::before {
 
 @media (max-width:767px) {
     header .container>.main-nav>li>a {
-        font-size: 10px;
+        font-size: 11px;
         height: 40px;
         padding: 5px;
     }
@@ -307,7 +307,6 @@ header .mega-menu {
     left: 0;
     width: 100%;
     transition: var(--main-transition);
-    /* border-bottom: 3px solid var(--main-color); */
     border-radius: 0 0 20px 20px;
     background-color: white;
     padding: 30px;
@@ -367,7 +366,8 @@ header .mega-menu .links li a {
     color: var(--main-color);
     font-size: 18px;
     font-weight: bold;
-    display: block
+    display: block;
+    width: 100%;
 }
 
 header .mega-menu .links li a::before {
@@ -404,12 +404,6 @@ header .mega-menu .links li a:hover::before {
         border-bottom: 1px solid #e9e6e6;
     }
 }
-
-/* @media (max-width:767px) {
-    header .mega-menu {
-        padding-bottom: 90px;
-    }
-} */
 
 /* End Header */
 
