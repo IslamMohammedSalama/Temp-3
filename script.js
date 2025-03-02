@@ -84,6 +84,25 @@ function startCount(el) {
 	}, 2000 / goal);
 }
 
-
-let copyRight = document.querySelector("footer .copyright")
+let copyRight = document.querySelector("footer .copyright");
 copyRight.innerHTML = `&copy; ${new Date().getFullYear()} Made With &lt;3 By Elzero`;
+
+let megaMenu = document.querySelector(
+	"header .main-nav>li:last-child>.mega-menu"
+);
+document.querySelector("header .main-nav>li:last-child>a").onclick = function (
+	event
+) {
+	megaMenu.classList.toggle("open");
+};
+
+addEventListener("click", function (event) {
+	console.log(event.target.classList);
+	console.log(event.target.matches("header .main-nav>li:last-child>a"))
+	if (
+		!event.target.matches("header .main-nav>li:last-child>a") &&
+		megaMenu.classList.contains("open")
+	) {
+		megaMenu.classList.remove("open");
+	}
+});

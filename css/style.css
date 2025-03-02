@@ -287,13 +287,18 @@ header .container>.main-nav>li>a:hover::before {
     }
 }
 
-header .main-nav>li:hover>.mega-menu {
+header .main-nav>li>.mega-menu.open {
     z-index: 1000;
     opacity: 1;
     /* top: calc(100% + 1px); */
     top: 100%;
     pointer-events: auto;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 10%);
+}
+
+header .main-nav>li:last-child>a {
+    user-select: none;
+    cursor: pointer;
 }
 
 header .mega-menu {
@@ -344,7 +349,9 @@ header .mega-menu .links {
 
 header .mega-menu .links li {
     position: relative;
-    flex: 1;display: flex;align-items: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 header .mega-menu .links li a i {
