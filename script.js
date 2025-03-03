@@ -104,6 +104,7 @@ addEventListener("click", function (event) {
 	if (
 		!event.target.matches("header .main-nav>li:last-child>a") &&
 		!event.target.matches("header .main-nav>li:last-child>.mega-menu *:not(a)") &&
+		!event.target.matches("header .main-nav>li:last-child>.mega-menu") &&
 		megaMenu.classList.contains("open")
 	) {
 		megaMenu.classList.remove("open");
