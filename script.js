@@ -99,8 +99,6 @@ document.querySelector("header .main-nav>li:last-child>a").onclick = function (
 };
 
 addEventListener("click", function (event) {
-	console.log(event.target.classList);
-	console.log(event.target.matches("header .main-nav>li:last-child>a"))
 	if (
 		!event.target.matches("header .main-nav>li:last-child>a") &&
 		!event.target.matches("header .main-nav>li:last-child>.mega-menu *:not(a)") &&
