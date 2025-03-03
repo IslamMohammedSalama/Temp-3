@@ -319,6 +319,25 @@ header .mega-menu {
     overflow: hidden;
 }
 
+.overley {
+    position: fixed;
+    width: 1000dvw;
+    height: 1000dvh;
+    left: -1000px;
+    top: 0;
+    transition: var(--main-transition);
+}
+
+body:has(.mega-menu.open) .overley {
+    background-color: rgb(0 0 0 / 30%);
+
+}
+
+.remove-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 header .main-nav>li:hover>.mega-menu:after {
     width: 100%;
 }

@@ -94,6 +94,8 @@ document.querySelector("header .main-nav>li:last-child>a").onclick = function (
 	event
 ) {
 	megaMenu.classList.toggle("open");
+	document.body.classList.toggle("remove-scrolling")
+
 };
 
 addEventListener("click", function (event) {
@@ -105,5 +107,16 @@ addEventListener("click", function (event) {
 		megaMenu.classList.contains("open")
 	) {
 		megaMenu.classList.remove("open");
+		document.body.classList.remove("remove-scrolling")
 	}
 });
+
+
+window.onscroll = function () {
+	if (megaMenu.classList.contains("open")) {
+		document.body.classList.add("remove-scrolling")
+	}
+	else {
+		document.body.classList.remove("remove-scrolling")
+	}
+}
