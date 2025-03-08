@@ -326,11 +326,13 @@ header .mega-menu {
     left: -1000px;
     top: 0;
     transition: var(--main-transition);
+    pointer-events: none;
+    z-index: 9;
 }
 
 body:has(.mega-menu.open) .overley {
     background-color: rgb(0 0 0 / 30%);
-
+    pointer-events: auto;
 }
 
 .remove-scrolling {
